@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.mmorgagni.lotoapp" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>LotoApp</name>
+    <description>
+        An app for manage and make reservations on Lotofit courses.
+    </description>
+    <author email="michele.morgagni@gmail.com" href="http://www.lotofit.it">
+        Lotofit
+    </author>
+    <content src="index.html#home" />
+    <access origin="*" />
+    <preference name="fullscreen" value="true" />
+    <preference name="webviewbounce" value="true" />
+</widget>

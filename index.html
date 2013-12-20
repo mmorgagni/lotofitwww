@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/calendar.css" />
+		<link rel="stylesheet" type="text/css" href="css/lesson.css" />
+        <title>LotoApp</title>
+		
+		<link rel="stylesheet" type="text/css" href="js/jquery.mobile-1.3.2/jquery.mobile-1.3.2.min.css" />
+		<script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+		<script type="text/javascript" src="js/jquery.mobile-1.3.2/jquery.mobile-1.3.2.min.js"></script>
+		
+		<script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+		<!--<script type="text/javascript" src="js/calendar.js"></script>-->
+		
+    </head>
+    <body>
+	
+	<div data-role="page" id="home">
+				<div data-role="header" id="top_container_home" data-position="fixed">
+					<a href="" data-icon="arrow-l" onclick="closeClicked()">Esci</a>
+					<!--<div id="top_left_container_home"><img id="back_image_home" src="img/back2.png" onclick="closeClicked()"/></div>-->
+					<h1>LotoApp</h1>
+					<!--<img id="logo_image_home"  class="ui-btn-right" src="img/lotofit2.png"/>-->
+				</div>
+			
+				<div data-role="content" align="bottom" id="bottom_container_home">
+				
+					<h1 style="text-align: center;">LotoApp</h1>
+					<h3 style="text-align: center;">Benvenuto</h3>
+				
+					<form id="login_form">
+					
+						<fieldset data-role="fieldcontain" class="ui-hide-label">
+							<label for="username_form" class="ui-input-text">Username</label>
+							<input type="text" name="username" id="username_form" placeholder="Username" value=""/>
+						</fieldset>
+						<fieldset data-role="fieldcontain" class="ui-hide-label">
+							<label for="password_form" class="ui-input-text">Password</label>
+							<input type="password" name="password" id="password_form" placeholder="Password" value=""/>
+						</fieldset>
+						<fieldset data-role="fieldcontain" class="ui-hide-label">
+							<input type="checkbox" name="remember" id="remember" value="checked" checked="checked" />
+							<label for="remember">Ricordami</label>
+						</fieldset>
+						<div id="login_form_warning"></div>
+						<input type="submit" value="Accedi" class="appbutton" onclick="return authenticateCall();"/>
+					<!--
+						<div id="login_form_container">
+							<div class="login_label">Username</div>
+							<div class="login_value"><input type="text" id="username_text" name="username" value=""/></div>
+							<div class="login_label">Password</div>
+							<div class="login_value"><input type="password" id="password_text" name="password"  value=""/></div>
+							<div class="login_value"><input type="checkbox" id="remember_checkbox" name="remember"  value="checked" checked />Ricordami</div>
+							<div id="login_form_warning"></div>
+							<p><input type="submit" value="Accedi" class="appbutton" onclick="return authenticateCall();"/></p>
+						</div>
+					-->
+					</form>
+				</div>
+				
+				<div data-role="footer" data-position="fixed"><img id="logo_image_home" src="img/lotofit3.png"/></div>
+		</div>
+	
+		<!--<div data-role="page" id="home">
+			<div id="main_container">
+				<div id="top_container">
+					<div id="top_right_container"><img id="logo_image" src="img/lotofit2.png"/></div>
+					<div id="top_left_container"><img id="back_image" src="img/back2.png" onclick="closeClicked()"/></div>
+					<div id="clear_top"></div>
+				</div>
+			
+				<div id="bottom_container">
+					<form id="login_form">
+						<div id="login_form_container">
+							<div class="login_label">Username</div>
+							<div class="login_value"><input type="text" id="username_text" name="username" value=""/></div>
+							<div class="login_label">Password</div>
+							<div class="login_value"><input type="password" id="password_text" name="password"  value=""/></div>
+							<div class="login_value"><input type="checkbox" id="remember_checkbox" name="remember"  value="checked" checked />Ricordami</div>
+							<div id="login_form_warning"></div>
+							<p><input type="submit" value="Accedi" class="appbutton" onclick="return authenticateCall();"/></p>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>-->
+		
+		<div data-role="page" id="calendar">
+			
+				<div data-role="header" id="top_container_calendar" data-position="fixed">
+					<a href="" data-icon="arrow-l" onclick="backClicked()">Logout</a>
+					<!--<div id="top_left_container_home"><img id="back_image_home" src="img/back2.png" onclick="closeClicked()"/></div>-->
+					<h1>LotoApp | Calendario</h1>
+					<!--<img id="logo_image_home"  class="ui-btn-right" src="img/lotofit2.png"/>-->
+					<div id="middle_container">
+						<a class="day_link" id="day_link_post" href="" onclick="return moveDayRight();">
+							<div class="calendar_post">&gt;</div>
+						</a>
+						<div class="calendar_day_intestation">-/-/-</div>
+						<a class="day_link" id="day_link_prev" href="" onclick="return moveDayLeft();">
+							<div class="calendar_prev">&lt;</div>
+						</a>
+					</div>
+					<!--
+					<div id="middle_container_calendar">
+						
+						<a class="day_link ui-btn-left" id="day_link_prev" href="" onclick="return moveDayLeft();" data-icon="arrow-l" data-role="button" data-iconpos="notext" >Ieri</a>
+						<span class="calendar_day_intestation">-/-/-</span>
+						<a class="day_link ui-btn-right" id="day_link_post" href="" onclick="return moveDayRight();" data-icon="arrow-r" data-role="button" data-iconpos="notext" data-direction="reverse" >Domani</a>
+
+					</div>
+					-->
+				</div>
+				
+				<div data-role="content" id="bottom_container_calendar"></div>
+				
+				<div data-role="footer" data-position="fixed"><img id="logo_image_home" src="img/lotofit3.png"/></div>
+			
+		</div>
+		
+		<!--
+		<div data-role="page" id="calendar">
+			<div id="main_container">
+				<div id="top_container">
+					<div id="top_right_container"><img id="logo_image" src="img/lotofit2.png"/></div>
+					<div id="top_left_container"><img id="back_image" src="img/back2.png" onclick="closeClicked()"/></div>
+					<div id="clear_top"></div>
+				</div>
+				<div id="middle_container">
+					<a class="day_link" id="day_link_post" href="" onclick="return moveDayRight();">
+						<div class="calendar_post">&gt;</div>
+					</a>
+					<div class="calendar_day_intestation">-/-/-</div>
+					<a class="day_link" id="day_link_prev" href="" onclick="return moveDayLeft();">
+						<div class="calendar_prev">&lt;</div>
+					</a>
+				</div>
+				<div id="bottom_container_calendar"></div>
+			</div>
+		</div>
+		-->
+		
+		<div data-role="page" id="lesson">
+			
+				<div data-role="header" id="top_container_lesson" data-position="fixed">
+						<a href="" data-icon="arrow-l" onclick="backClicked()">Calendario</a>
+						<!--<div id="top_left_container_home"><img id="back_image_home" src="img/back2.png" onclick="closeClicked()"/></div>-->
+						<h1>LotoApp | Lezione</h1>
+				</div>
+
+				<div data-role="content" id="bottom_container_lesson">
+					<!-- Lesson details -->
+					<div id="lesson_details_name">
+						<span id="lesson_details_name_label">Corso:</span>
+						<span id="lesson_details_name_value"></span>
+					</div>
+					<div id="lesson_details_date">
+						<span id="lesson_details_date_label">Data:</span>
+						<span id="lesson_details_date_value"></span>
+					</div>
+					<div id="lesson_details_time">
+						<span id="lesson_details_time_label">Orario:</span>
+						<span id="lesson_details_time_value"></span>
+					</div>
+					<div id="lesson_details_seats">
+						<span id="lesson_details_seats_label">Numero massimo partecipanti:</span>
+						<span id="lesson_details_seats_value"></span>
+					</div>
+					<!-- Reservations details -->
+					<div id="lesson_details_count">
+						<span id="lesson_details_count_label">Prenotazioni attuali:</span>
+						<span id="lesson_details_count_value"></span>
+					</div>
+					<div id="lesson_details_countconfirmed">
+						<span id="lesson_details_countconfirmed_label">Prenotazioni confermate:</span>
+						<span id="lesson_details_countconfirmed_value"></span>
+					</div>
+					<div class="lesson_details_count_warning">Queste prenotazioni difficilmente verranno cancellate prima della lezione</div>
+					<div id="lesson_details_countnotconfirmed">
+						<span id="lesson_details_countnotconfirmed_label">Prenotazioni non ancora confermate:</span>
+						<span id="lesson_details_countnotconfirmed_value"></span>
+					</div>
+					<div class="lesson_details_count_warning">Le conferme a queste prenotazioni devono avvenire almeno 72 ore prima della lezione: se sei interessato a questo corso ed i posti sono esauriti, ricontrolla la disponibilit&agrave; nei prossimi giorni</div>
+					<div id="lesson_details_countlastminute">
+						<span id="lesson_details_countlastminute_label">Prenotazioni last minute:</span>
+						<span id="lesson_details_countlastminute_value"></span>
+					</div>
+					<div class="lesson_details_count_warning">Queste prenotazioni sono state effettuate entro 24 ore dalla lezione</div>
+					<!-- User reservation details -->
+					<div id="lesson_details_status"></div>
+					<div id="lesson_details_buttons"></div>
+				</div>
+				
+				<div data-role="footer" data-position="fixed"><img id="logo_image_home" src="img/lotofit3.png"/></div>
+			
+		</div>	
+		<!--
+		<div data-role="page" id="lesson">
+			<div id="main_container">
+				<div id="top_container">
+					<div id="top_right_container"><img id="logo_image" src="img/lotofit2.png"/></div>
+					<div id="top_left_container"><img id="back_image" src="img/back2.png" onclick="backClicked()"/></div>
+					<div id="clear_top"></div>
+				</div>
+				<div id="bottom_container_lesson">
+					
+					<div id="lesson_details_name">
+						<span id="lesson_details_name_label">Corso:</span>
+						<span id="lesson_details_name_value"></span>
+					</div>
+					<div id="lesson_details_date">
+						<span id="lesson_details_date_label">Data:</span>
+						<span id="lesson_details_date_value"></span>
+					</div>
+					<div id="lesson_details_time">
+						<span id="lesson_details_time_label">Orario:</span>
+						<span id="lesson_details_time_value"></span>
+					</div>
+					<div id="lesson_details_seats">
+						<span id="lesson_details_seats_label">Numero massimo partecipanti:</span>
+						<span id="lesson_details_seats_value"></span>
+					</div>
+					
+					<div id="lesson_details_count">
+						<span id="lesson_details_count_label">Prenotazioni attuali:</span>
+						<span id="lesson_details_count_value"></span>
+					</div>
+					<div id="lesson_details_countconfirmed">
+						<span id="lesson_details_countconfirmed_label">Prenotazioni confermate:</span>
+						<span id="lesson_details_countconfirmed_value"></span>
+					</div>
+					<div class="lesson_details_count_warning">Queste prenotazioni difficilmente verranno cancellate prima della lezione</div>
+					<div id="lesson_details_countnotconfirmed">
+						<span id="lesson_details_countnotconfirmed_label">Prenotazioni non ancora confermate:</span>
+						<span id="lesson_details_countnotconfirmed_value"></span>
+					</div>
+					<div class="lesson_details_count_warning">Le conferme a queste prenotazioni devono avvenire almeno 72 ore prima della lezione: se sei interessato a questo corso ed i posti sono esauriti, ricontrolla la disponibilit&agrave; nei prossimi giorni</div>
+					<div id="lesson_details_countlastminute">
+						<span id="lesson_details_countlastminute_label">Prenotazioni last minute:</span>
+						<span id="lesson_details_countlastminute_value"></span>
+					</div>
+					<div class="lesson_details_count_warning">Queste prenotazioni sono state effettuate entro 24 ore dalla lezione</div>
+					
+					<div id="lesson_details_status"></div>
+					<div id="lesson_details_buttons"></div>
+				</div>
+			</div>
+		</div>	-->
+    </body>
+</html>

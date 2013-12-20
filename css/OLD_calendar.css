@@ -1,0 +1,219 @@
+body{
+	margin:0;
+	padding:0;
+	font-size:22px;
+	
+	background-color:#E4E4E4;
+    background-image:linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image:-webkit-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image:-ms-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image:-webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0, #A7A7A7),
+        color-stop(0.51, #E4E4E4)
+    );
+    background-attachment:fixed;
+	
+}
+
+#main_container{
+	width:100%;
+}
+#top_container{
+	width:98%;
+	margin-left:auto;
+	margin-right:auto;
+	background-color:#000000;
+	-webkit-box-shadow: 7px 7px 5px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:    7px 7px 5px rgba(50, 50, 50, 0.75);
+	box-shadow:         7px 7px 5px rgba(50, 50, 50, 0.75);
+}
+#bottom_container{
+	width:100%;
+}
+#logo_image{
+	width:100%;
+	margin-top:15px;
+	margin-bottom:15px;
+}
+
+#middle_container{
+	width:98%;
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom:15px;
+	background-color:#44e614;
+	opacity:0.9;
+	border:solid 1px #000000;
+	-webkit-box-shadow: 7px 7px 5px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:    7px 7px 5px rgba(50, 50, 50, 0.75);
+	box-shadow:         7px 7px 5px rgba(50, 50, 50, 0.75);
+}
+
+.calendar_prev{
+	width:20%;
+	padding-top:15px;
+	padding-bottom:15px;
+	text-align:center;
+}
+
+.calendar_post{
+	width:20%;
+	padding-top:15px;
+	padding-bottom:15px;
+	text-align:center;
+	float:right;
+}
+
+.calendar_day_intestation{
+	width:60%;
+	padding-top:15px;
+	padding-bottom:15px;
+	text-align:center;
+	float:right;
+	border-left:solid 1px #000000;
+	border-right:solid 1px #000000;
+}
+
+.day_link{
+	text-decoration:none;
+	color:#000000;
+}
+
+
+
+
+.calendar_row{
+	width:100%;
+	margin-bottom:15px;
+}
+
+.lesson_link{
+	text-decoration:none;
+	color:#000000;
+}
+
+.calendar_element_seats{
+	width:20%;
+	float:right;
+	padding-top:10px;
+	padding-bottom:10px;
+	text-align:center;
+}
+/*
+.calendar_row_left{
+	width:80%;
+}
+*/
+.calendar_element_name_none{
+	width: 60%;
+	float:right;
+	padding-top:10px;
+	padding-bottom:10px;
+	text-align:center;
+}
+.calendar_element_name_-1{
+	width: 60%;
+	float:right;
+	padding-top:10px;
+	padding-bottom:10px;
+	text-align:center;
+	background-color:#ffffff;
+	border: solid 1px #000000;
+	opacity:0.9;
+	-webkit-box-shadow: 7px 7px 5px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:    7px 7px 5px rgba(50, 50, 50, 0.75);
+	box-shadow:         7px 7px 5px rgba(50, 50, 50, 0.75);
+}
+.calendar_element_name_0{
+	width: 60%;
+	float:right;
+	padding-top:10px;
+	padding-bottom:10px;
+	text-align:center;
+	background-color:#44e614;
+	border: solid 1px #000000;
+	opacity:0.9;
+	-webkit-box-shadow: 7px 7px 5px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:    7px 7px 5px rgba(50, 50, 50, 0.75);
+	box-shadow:         7px 7px 5px rgba(50, 50, 50, 0.75);
+}
+.calendar_element_name_1{
+	width: 60%;
+	float:right;
+	padding-top:10px;
+	padding-bottom:10px;
+	text-align:center;
+	background-color:#ff9900;
+	border: solid 1px #000000;
+	opacity:0.9;
+	-webkit-box-shadow: 7px 7px 5px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:    7px 7px 5px rgba(50, 50, 50, 0.75);
+	box-shadow:         7px 7px 5px rgba(50, 50, 50, 0.75);
+}
+.calendar_element_name_2{
+	width: 60%;
+	float:right;
+	padding-top:10px;
+	padding-bottom:10px;
+	text-align:center;
+	background-color:#ba0ef2;
+	border: solid 1px #000000;
+	opacity:0.9;
+	-webkit-box-shadow: 7px 7px 5px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:    7px 7px 5px rgba(50, 50, 50, 0.75);
+	box-shadow:         7px 7px 5px rgba(50, 50, 50, 0.75);
+}
+
+.calendar_element_time{
+	width:20%;
+	padding-top:10px;
+	padding-bottom:10px;
+	text-align:center;
+}
+
+
+
+
+/*
+#courses_table{
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.calendar_element_none{
+	font-size:24px;
+	background-color:#dddddd;
+}
+
+.calendar_element_0{
+	font-size:24px;
+	background-color:#44e614;
+}
+.calendar_element_1{
+	font-size:24px;
+	background-color:#ff9900;
+}
+.calendar_element_2{
+	font-size:24px;
+	background-color:#ba0ef2;
+}
+
+.calendar_element_time{
+	padding:10px;
+	text-align:center;
+	border: solid 1px #000000;
+}
+.calendar_element_name{
+	padding:10px;
+	text-align:center;
+	border: solid 1px #000000;
+}
+.calendar_element_seats{
+	padding:10px;
+	text-align:center;
+	border: solid 1px #000000;
+}
+*/

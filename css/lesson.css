@@ -1,0 +1,198 @@
+#bottom_container_lesson{
+	/*width:100%;*/
+}
+
+#lesson_details_name{
+	width:100%;
+	margin-top:10px;
+	font-size:20px;
+	font-weight:bold;
+	padding-top:10px;
+	padding-bottom:10px;
+	color:#000000;
+	text-align:center;
+}
+#lesson_details_date{
+	width:100%;
+	font-size:18px;
+	padding-top:10px;
+	padding-bottom:0px;
+	color:#000000;
+	text-align:center;
+}
+#lesson_details_time{
+	width:100%;
+	font-size:18px;
+	padding-top:10px;
+	padding-bottom:10px;
+	color:#000000;
+	text-align:center;
+}
+#lesson_details_seats{
+	width:100%;
+	font-size:16px;
+	/*font-weight:bold;*/
+	padding-top:10px;
+	padding-bottom:10px;
+	color:#000000;
+	text-align:center;
+}
+
+#lesson_details_count{
+	width:90%;
+	font-size:19px;
+	/*font-weight:bold;*/
+	margin-left:5%;
+	margin-top:10px;
+	margin-bottom:10px;
+	padding-top:5px;
+	padding-bottom:5px;
+	color:#000000;
+	background-color:#efefef;
+	text-align:center;
+	-webkit-box-shadow: 4px 4px 3px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:    4px 4px 3px rgba(50, 50, 50, 0.75);
+	box-shadow:         4px 4px 3px rgba(50, 50, 50, 0.75);
+}
+
+#lesson_details_countconfirmed{
+	width:90%;
+	font-size:16px;
+	/*font-weight:bold;*/
+	margin-left:5%;
+	margin-bottom:2px;
+	padding-top:5px;
+	padding-bottom:5px;
+	color:#ffffff;
+	background-color:#7de614;
+	text-align:center;
+	-webkit-box-shadow: 4px 4px 3px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:    4px 4px 3px rgba(50, 50, 50, 0.75);
+	box-shadow:         4px 4px 3px rgba(50, 50, 50, 0.75);
+}
+
+#lesson_details_countnotconfirmed{
+	width:90%;
+	font-size:16px;
+	/*font-weight:bold;*/
+	margin-left:5%;
+	margin-bottom:2px;
+	padding-top:5px;
+	padding-bottom:5px;
+	color:#ffffff;
+	background-color:#ff9900;
+	text-align:center;
+	-webkit-box-shadow: 4px 4px 3px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:    4px 4px 3px rgba(50, 50, 50, 0.75);
+	box-shadow:         4px 4px 3px rgba(50, 50, 50, 0.75);
+}
+
+#lesson_details_countlastminute{
+	width:90%;
+	font-size:16px;
+	/*font-weight:bold;*/
+	margin-left:5%;
+	margin-bottom:2px;
+	padding-top:5px;
+	padding-bottom:5px;
+	color:#ffffff;
+	background-color:#ba0ef2;
+	text-align:center;
+	-webkit-box-shadow: 4px 4px 3px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:    4px 4px 3px rgba(50, 50, 50, 0.75);
+	box-shadow:         4px 4px 3px rgba(50, 50, 50, 0.75);
+}
+
+.lesson_details_count_warning{
+	width:90%;
+	margin-left:5%;
+	padding-top:5px;
+	padding-bottom:5px;
+	font-size:14px;
+	text-align:justify;
+	font-style:italic;
+}
+
+.status_confirmed{
+	width:90%;
+	margin-top:10px;
+	margin-left:5%;
+	font-size:18px;
+	padding-top:30px;
+	padding-bottom:30px;
+	background-color:#7de614;
+	color:#ffffff;
+	text-align:center;
+	-webkit-box-shadow: 4px 4px 3px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:    4px 4px 3px rgba(50, 50, 50, 0.75);
+	box-shadow:         4px 4px 3px rgba(50, 50, 50, 0.75);
+}
+.status_notconfirmed{
+	width:90%;
+	margin-top:10px;
+	margin-left:5%;
+	font-size:18px;
+	padding-top:30px;
+	padding-bottom:30px;
+	background-color:#ff9900;
+	color:#ffffff;
+	text-align:center;
+	-webkit-box-shadow: 4px 4px 3px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:    4px 4px 3px rgba(50, 50, 50, 0.75);
+	box-shadow:         4px 4px 3px rgba(50, 50, 50, 0.75);
+}
+.status_lastminute{
+	width:90%;
+	margin-top:10px;
+	margin-left:5%;
+	font-size:18px;
+	padding-top:30px;
+	padding-bottom:30px;
+	background-color:#ba0ef2;
+	color:#ffffff;
+	text-align:center;
+	-webkit-box-shadow: 4px 4px 3px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:    4px 4px 3px rgba(50, 50, 50, 0.75);
+	box-shadow:         4px 4px 3px rgba(50, 50, 50, 0.75);
+}
+.status_none{
+	width:90%;
+	margin-top:10px;
+	margin-left:5%;
+	font-size:18px;
+	padding-top:30px;
+	padding-bottom:30px;
+	background-color:#dddddd;
+	color:#000000;
+	text-align:center;
+	-webkit-box-shadow: 4px 4px 3px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:    4px 4px 3px rgba(50, 50, 50, 0.75);
+	box-shadow:         4px 4px 3px rgba(50, 50, 50, 0.75);
+}
+
+.lesson_button{
+	width:90%;
+	margin-top:10px;
+	margin-left:5%;
+	font-size:18px;
+	padding-top:15px;
+	padding-bottom:15px;
+	background-color:#dddddd;
+	border:none;
+	color:#000000;
+	text-align:center;
+	-webkit-box-shadow: 4px 4px 3px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:    4px 4px 3px rgba(50, 50, 50, 0.75);
+	box-shadow:         4px 4px 3px rgba(50, 50, 50, 0.75);
+}
+
+.lesson_error_warning{
+	width:90%;
+	margin-left:5%;
+	margin-top:5px;
+	padding-top:5px;
+	padding-bottom:5px;
+	font-size:16px;
+	text-align:justify;
+	font-style:italic;
+}
